@@ -10,14 +10,11 @@ import static tree.Node.createNode;
  * Created by mwrobel on 24.03.16.
  */
 public class NodeTest {
-
-    private Tree tree;
     private Node root;
 
     @Before
     public void setUp() throws Exception {
-        tree = Tree.createTree(createNode("Animal"));
-        root = tree.getRoot();
+        root = createNode("Animal");
     }
 
     @Test
@@ -103,13 +100,13 @@ public class NodeTest {
     }
 
     @Test
-    public void get_Level_of_Node(){
+    public void elephant_should_have_Level_number_two(){
         // given
         final Node node = root.addChild(createNode("Mammals"));
         final Node node2 = node.addChild(createNode("Elephant"));
         // when
         final int level = root.getLevel(node2);
         // then
-        assertThat(level).isEqualTo(0);
+        assertThat(level).isEqualTo(2);
     }
 }

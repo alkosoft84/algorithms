@@ -36,10 +36,6 @@ public class Node {
         return this.getChildren().isEmpty();
     }
 
-    public Node getChild(int childIndex) {
-        return children.get(childIndex);
-    }
-
     public void removeChild(int childIndex) {
         children.remove(childIndex);
     }
