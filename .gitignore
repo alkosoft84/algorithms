@@ -1,4 +1,10 @@
 *.class
+.idea
+*.iml
+target
+build/
+bootstrap.css
+bootstrap.js
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
